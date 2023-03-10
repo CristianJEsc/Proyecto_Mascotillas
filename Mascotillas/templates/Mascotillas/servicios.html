@@ -1,0 +1,19 @@
+{% extends 'Mascotillas/zPadre.html' %}
+{%load static %}
+
+{% block contenido%}
+<h1>SERVICIOS</h1>
+
+    {% if servicios_formulario.errors %}
+    <p style="color:red">Los datos ingresados no son correctos</p>
+    {% endif %}
+    <form action="" method="POST">{% csrf_token %}
+        <table>
+            {{servicios_formulario.as_table}}
+        </table>       
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+</html>
+{% endblock %}

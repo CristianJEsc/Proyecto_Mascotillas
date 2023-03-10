@@ -1,0 +1,19 @@
+{% extends 'Mascotillas/zPadre.html' %}
+{%load static %}
+
+{% block contenido%}
+{% if mascota %}
+<ul>
+    <h1>Mascotas:</h1>
+    {% for n in mascota %}
+    <li><p>Nombre:{{n.nombre}}</li></p>    
+    <li><p>Animal:{{n.animal}}</li></p>
+    <li><p>Raza:{{n.raza}}</li></p>
+    <li><p>Fecha de Nacimiento{{n.fecha_nacimiento}}</li></p>
+    <br>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
+
+<p style="color:red">{{respuesta}}</p>

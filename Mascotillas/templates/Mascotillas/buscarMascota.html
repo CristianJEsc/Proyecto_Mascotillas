@@ -1,0 +1,11 @@
+{% extends 'Mascotillas/zPadre.html' %}
+{%load static %}
+
+{% block contenido%}
+
+<form action="buscar" method="GET">
+    <h1>Escribe el nombre de la mascota</h1>
+        <input type="text" name="nombre" id="nombre">
+        <input type="submit" value="Buscar ">
+</form>    
+{% endblock %}

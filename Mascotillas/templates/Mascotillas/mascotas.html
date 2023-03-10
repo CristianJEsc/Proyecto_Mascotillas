@@ -1,0 +1,19 @@
+{% extends 'Mascotillas/zPadre.html' %}
+{%load static %}
+
+{% block contenido%}
+<h1>MASCOTAS</h1>
+
+{% if mascotas_formulario.errors %}
+
+<p style="color:red">Los datos ingresados no son correctos</p>
+{% endif %}
+<form action="" method="POST">{% csrf_token %}
+    <table>
+        {{mascotas_formulario.as_table}}
+    </table> <p><small>(mm-dd-aaaa)</small></p>
+
+    <input type="submit" value="Enviar">
+
+    </form>
+{% endblock %}
